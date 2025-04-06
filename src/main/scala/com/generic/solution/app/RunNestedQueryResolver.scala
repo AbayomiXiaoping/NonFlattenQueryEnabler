@@ -23,17 +23,23 @@ object RunNestedQueryResolver {
         |ORDER BY zoneId DESC
         |""".stripMargin
 
-    val result = NestedQueryResolver.resolveQuery(df, query)
-    result.show(false)
+    import com.generic.solution.utility.NestedQueryResolver._
+
+
+    validateQuerySyntax(query) match {
+      case Right(parsed) =>
+        println("Query is syntactically valid.")
+        val result = resolveQuery(df, query)
+        result.show()
+
+      case Left(error) =>
+        println(s"Query is invalid: $error")
+    }
+
 
 //    val doc = SchemaPathHelper.generateColumnDocumentation(df.schema)
 //    println("===== COLUMN DOCUMENTATION =====")
 //    println(doc)
-    /*
-    Exception in thread "main" java.lang.IllegalArgumentException: Column 'certAuthority' not found under namespaces: payload.policyDetails.agent.branch.region.zone, payload.policyDetails.agent.certAuthority.certAuthority, payload.policyDetails.agent.certAuthority, payload.policyDetails.policyStatus. Tried paths: payload.policyDetails.agent.branch.region.zone.certAuthority, payload.policyDetails.agent.certAuthority.certAuthority, payload.policyDetails.agent.certAuthority, payload.policyDetails.policyStatus.certAuthority, certAuthority
-	at com.kafkastreaming.main.utlities.SchemaPathHelper$.$anonfun$resolveLeaf$3(SchemaPathHelper.scala:43)
-	at scala.Option.getOrElse(Option.scala:189)
-     */
   }
 }
 
