@@ -6,7 +6,11 @@ scalaVersion := "2.12.10"
 
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.1.1"
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.1.1"
-javaOptions += "--add-opens=java.base/java.nio=ALL-UNNAMED"
+libraryDependencies ++= Seq(
+  "org.apache.spark" %% "spark-sql" % "3.3.2" % Test,
+  "org.scalatest" %% "scalatest" % "3.2.16" % Test
+)
+
 
 
 //libraryDependencies ++= Seq(
