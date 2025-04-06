@@ -1,0 +1,211 @@
+{
+  "header": {
+    "messageId": "MSG-20250406-0001",
+    "sourceSystem": "PolicyAdminSystem",
+    "eventType": "NewPolicy",
+    "timestamp": "2025-04-06T12:00:00Z",
+    "recordVersion": 3,
+    "auditTrail": {
+      "createdBy": "api_user",
+      "createdDate": "2025-04-06T11:59:59Z",
+      "updatedBy": "api_user",
+      "updatedDate": "2025-04-06T12:00:00Z",
+      "systemInfo": {
+        "env": "production",
+        "region": "ap-south-1",
+        "appVersion": "v1.9.2",
+        "ipTrace": {
+          "ip": "10.10.12.56",
+          "device": {
+            "deviceId": "DEVICE9987",
+            "os": {
+              "type": "Android",
+              "version": "14",
+              "securityPatch": {
+                "level": "2025-03",
+                "verified": true,
+                "certAuthority": {
+                  "id": "CERT-AUTH-987",
+                  "name": "Indian Cyber Authority",
+                  "location": {
+                    "country": "India",
+                    "region": {
+                      "name": "Northeast",
+                      "zone": {
+                        "zoneId": "ZN001",
+                        "dataCenter": {
+                          "id": "DC009",
+                          "rack": {
+                            "rackId": "RACK-1221",
+                            "node": {
+                              "nodeId": "NODE-808",
+                              "vm": {
+                                "vmId": "VM-8821",
+                                "container": {
+                                  "containerId": "CONT-5544",
+                                  "kernelVersion": "5.4.0-149"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "payload": {
+    "policyDetails": {
+      "policyId": "POL998877",
+      "policyNumber": "IN-LIFE-NE-2025-0001",
+      "status": "Active",
+      "issuedDate": "2025-04-05",
+      "agent": {
+        "agentId": "AGT1212",
+        "branch": {
+          "branchId": "BR009",
+          "region": {
+            "regionId": "NE01",
+            "zone": {
+              "zoneId": "ZNE001",
+              "salesHead": {
+                "employeeId": "EMP4455",
+                "contact": {
+                  "email": "head.ne@securelife.com",
+                  "phone": {
+                    "mobile": "9999999999",
+                    "landline": "0361-2244556"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "holder": {
+        "holderId": "H001",
+        "personalInfo": {
+          "name": {
+            "first": "Rajiv",
+            "middle": "Kumar",
+            "last": "Das"
+          },
+          "dob": "1980-06-20",
+          "contact": {
+            "email": "rajiv.das@example.com",
+            "phones": [
+              {
+                "type": "mobile",
+                "number": "9876543210"
+              },
+              {
+                "type": "work",
+                "number": "0361-2223344"
+              }
+            ],
+            "address": {
+              "line1": "House No. 10",
+              "line2": "Zoo Road",
+              "city": "Guwahati",
+              "state": "Assam",
+              "country": "India",
+              "geo": {
+                "lat": 26.1445,
+                "lon": 91.7362,
+                "timezone": {
+                  "name": "Asia/Kolkata",
+                  "utcOffset": "+5:30",
+                  "dst": {
+                    "applies": false,
+                    "history": {
+                      "lastApplied": null,
+                      "rules": {
+                        "start": null,
+                        "end": null,
+                        "exceptions": []
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "employment": {
+          "status": "Salaried",
+          "employer": {
+            "company": "ABC Pvt Ltd",
+            "industry": {
+              "sector": "IT Services",
+              "subSector": {
+                "subType": "Software",
+                "domain": {
+                  "category": "BFSI",
+                  "technologies": {
+                    "primary": "Java",
+                    "secondary": "Spark",
+                    "infra": {
+                      "cloud": "AWS",
+                      "region": "Mumbai",
+                      "availabilityZone": {
+                        "zoneId": "ap-south-1a",
+                        "backup": {
+                          "enabled": true,
+                          "frequency": "daily",
+                          "retention": {
+                            "durationDays": 30,
+                            "policyId": "BKP-PLCY-0091"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "coverages": [
+        {
+          "coverageId": "COV001",
+          "type": "Term Life",
+          "sumInsured": 1000000,
+          "premium": {
+            "amount": 15000,
+            "frequency": "Annual",
+            "paymentDetails": {
+              "method": "UPI",
+              "transactionId": "TXN9988UPI",
+              "bank": {
+                "name": "SBI",
+                "branch": "Guwahati Main",
+                "ifsc": "SBIN0000123"
+              }
+            }
+          },
+          "riders": [
+            {
+              "riderId": "RID001",
+              "name": "Critical Illness",
+              "sumInsured": 200000,
+              "conditions": {
+                "waitingPeriodDays": 90,
+                "exclusions": {
+                  "list": ["Pre-existing conditions", "Self-inflicted injuries"],
+                  "version": "v3"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
