@@ -1,4 +1,4 @@
-package com.generic.solution.app
+package com.generic.solution.utility
 
 import org.apache.spark.sql.functions.{col, lit}
 import org.apache.spark.sql.{Column, DataFrame}

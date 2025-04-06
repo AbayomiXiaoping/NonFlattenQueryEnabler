@@ -1,4 +1,4 @@
-package com.generic.solution.app
+package com.generic.solution.utility
 
 import org.apache.spark.sql.functions.{col, transform}
 import org.apache.spark.sql.types.{ArrayType, DataType, StructType}

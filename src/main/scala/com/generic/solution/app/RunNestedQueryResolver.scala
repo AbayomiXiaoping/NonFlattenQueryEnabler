@@ -1,5 +1,6 @@
 package com.generic.solution.app
 
+import com.generic.solution.utility.NestedQueryResolver
 import org.apache.spark.sql.SparkSession
 
 object RunNestedQueryResolver {
