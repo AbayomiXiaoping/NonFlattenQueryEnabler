@@ -101,4 +101,6 @@ class NestedQueryResolverTest extends AnyFunSuite {
       NestedQueryResolver.resolveQuery(df, query)
     }
 
-    assert(thrown.getMessage.contains
+    assert(thrown.getMessage.contains("Column 'nonExistentField' not found"))
+  }
+}
